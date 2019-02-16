@@ -1,0 +1,36 @@
+@import "../../../styles.less";
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(@gradient-start-color, @gradient-end-color);
+    position: relative;
+    margin-bottom: 20px;
+    .content {
+        .center();
+        .title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top:5px;
+            text-decoration: none;
+            color: black;
+        }
+        a {
+            color: black;
+            margin-right: 5px;
+        }
+    }
+    .logout-link {
+        color: black;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+a:hover {
+    color: white !important;
+}
+

@@ -1,0 +1,16 @@
+<div class="container">
+  <h4 class="title">Room: {{ chatRoom?.name }}</h4>
+  <ul class="message-container">
+    <li
+      class="message"
+      [ngClass]="{'other-message': authorId==message.authorId}"
+      *ngFor="let message of chatRoom?.messages">
+      <span class="author">{{ message.authorName }}</span>: {{ message.body }}</li>
+  </ul>
+  <input type="text" [(ngModel)]="messageText">
+  <button
+    id="sendbtn"
+    (click)="send()"
+    [disabled]="!messageText"
+    class="btn" >Send</button>
+  </div>

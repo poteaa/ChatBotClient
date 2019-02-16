@@ -1,0 +1,6 @@
+<div class="header">
+  <div class="content">
+      <a class="title" routerLink="/">ChatBot</a>
+  </div>
+  <a class="logout-link" *ngIf="authService.isLoggedIn()" (click)="logout()">Logout</a>
+</div>
